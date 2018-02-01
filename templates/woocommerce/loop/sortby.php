@@ -20,7 +20,7 @@ $filter_value_args = array(
 $filter_value = yit_get_filter_args( $filter_value_args );
 
 ?>
-<ul class="orderby">
+<select class="orderby">
     <?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 
         <?php if( $orderby == $id ) : ?>
@@ -31,10 +31,8 @@ $filter_value = yit_get_filter_args( $filter_value_args );
             <?php $filter_value['orderby'] = $id; ?>
         <?php endif; ?>
 
-        <li class="orderby-wrapper">
-            <a data-id="<?php echo esc_attr( $id ); ?>" class="<?php echo $a_class ?>" href="<?php echo esc_url( add_query_arg( $filter_value, $shop_page_uri ) ) ?>">
+        <option data-id="<?php echo esc_attr( $id ); ?>" class="<?php echo $a_class ?>" href="<?php echo esc_url( add_query_arg( $filter_value, $shop_page_uri ) ) ?>">
                 <?php echo esc_html( $name ); ?>
-            </a>
-        </li>
+        </option>
     <?php endforeach; ?>
-</ul>
+</select>

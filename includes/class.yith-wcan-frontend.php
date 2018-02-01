@@ -216,7 +216,7 @@ if ( ! class_exists( 'YITH_WCAN_Frontend' ) ) {
                 $suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
                 wp_enqueue_style( 'yith-wcan-frontend', YITH_WCAN_URL . 'assets/css/frontend.css', false, $this->version );
-                wp_enqueue_script( 'yith-wcan-script', YITH_WCAN_URL . 'assets/js/yith-wcan-frontend' . $suffix . '.js', array( 'jquery' ), $this->version, true );
+                wp_enqueue_script( 'yith-wcan-script', YITH_WCAN_URL . 'assets/js/yith-wcan-frontend.js', array( 'jquery' ), $this->version, true );
 
                 $custom_style = yith_wcan_get_option( 'yith_wcan_custom_style', '' );
 

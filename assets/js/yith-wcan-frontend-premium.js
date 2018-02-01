@@ -69,6 +69,16 @@
         $(this).yith_wcan_ajax_filters(e, this);
     });
 
+    $(document).on('change', '.orderby', function(e) {
+      var obj = $("option:selected", this).get(0);
+
+      var pass = {
+        'href': $(obj).attr('href'),
+      };
+
+      $(this).yith_wcan_ajax_filters(e, pass);
+    });
+
     if( yith_wcan_frontend_premium.ajax_wc_price_filter == 'yes' ){
         $(document).on('click', '.price_slider_amount button', function (e) {
             $(this).yith_wcan_ajax_filters(e, this);

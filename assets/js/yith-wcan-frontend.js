@@ -112,7 +112,6 @@ jQuery(function ($) {
         var href     = obj.href,
             t        = $(obj),
             is_reset = t.hasClass("yith-wcan-reset-navigation");
-
         if (typeof href == 'undefined' && t.parents().hasClass('price_slider_wrapper')) {
             var form = t.parents('form'),
                 l = window.location,

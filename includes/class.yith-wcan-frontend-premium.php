@@ -58,7 +58,7 @@ if ( ! class_exists( 'YITH_WCAN_Frontend_Premium' ) ) {
                     'force_widget_init'                     => apply_filters( 'yith_wcan_force_widget_init', false )
                 );
 
-                wp_enqueue_script( 'yith_wcan_frontend-premium', YITH_WCAN_URL . 'assets/js/yith-wcan-frontend-premium' . $suffix . '.js', array( 'jquery' ), $this->version, true );
+                wp_enqueue_script( 'yith_wcan_frontend-premium', YITH_WCAN_URL . 'assets/js/yith-wcan-frontend-premium.js', array( 'jquery' ), $this->version, true );
                 wp_localize_script( 'yith-wcan-script', 'yith_wcan_frontend', array( 'loader_url' => yith_wcan_get_option( 'yith_wcan_ajax_loader', $loader_url ) ) );
                 wp_localize_script( 'yith_wcan_frontend-premium', 'yith_wcan_frontend_premium', $options );
             }
